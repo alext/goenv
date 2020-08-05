@@ -97,7 +97,7 @@ set +e
 # Download binary tarball and install
 # Linux downloads are formatted differently from OS X
 (
-  curl --progress -L -f "$download" > "/tmp/go${version}.${platform}-${arch}.tar.gz" && \
+  curl --progress-bar -L -f "$download" > "/tmp/go${version}.${platform}-${arch}.tar.gz" && \
   tar zxvf "/tmp/go${version}.${platform}-${arch}.tar.gz" --strip-components 1 && \
   rm "/tmp/go${version}.${platform}-${arch}.tar.gz"
 ) || \
